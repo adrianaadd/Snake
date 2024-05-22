@@ -7,7 +7,7 @@ let player = new Player(400, 550)
 let timerMovePlayer
 let timerMoveBody
 let index = 0
-
+let direction = -1
 
 
 function startGame() {
@@ -22,19 +22,19 @@ window.addEventListener('keydown', function (e) {
     switch (e.key) {
         case 'a':
             player.directionX = -1
-            body.direction = -1
+            direction = -1
             break
         case 'd':
             player.directionX = 1
-            body.direction = 1
+            direction = 1
             break
         case 'w':
             player.directionY = -1
-            body.direction = -2
+            direction = -2
             break
         case 's':
             player.directionY = 1
-            body.direction = 2
+            direction = 2
             break
         case ' ':
             body = new Body(index)

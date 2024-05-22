@@ -14,11 +14,13 @@ class Body {
         this.sprite.style.height = this.height + 'px'
         let nextx
         let nexty
-        switch (this.direction) {
+        console.log(this.direction)
+        switch (direction) {
+            
             case -1:           
 
-                nextx = player.posArr[player.posArr.length - 1].x + 50;
-                nexty = player.posArr[player.posArr.length - 1].y + 15;
+                nextx = player.posArr[player.posArr.length - 1].x + 25;
+                nexty = player.posArr[player.posArr.length - 1].y ;
 
                 this.sprite.style.left = nextx + 'px';
                 this.sprite.style.top = nexty + 'px';
@@ -26,22 +28,22 @@ class Body {
                 break;
             case 1:
                 nextx = player.posArr[player.posArr.length - 1].x  - 25;
-                nexty = player.posArr[player.posArr.length - 1].y + 15;
+                nexty = player.posArr[player.posArr.length - 1].y ;
 
                 this.sprite.style.left = nextx + 'px';
                 this.sprite.style.top = nexty + 'px';
                 player.posArr.push({ x: nextx, y: nexty })
                 break;
             case -2:
-                nextx = player.posArr[player.posArr.length - 1].x  + 13;
-                nexty = player.posArr[player.posArr.length - 1].y + 50;
+                nextx = player.posArr[player.posArr.length - 1].x  ;
+                nexty = player.posArr[player.posArr.length - 1].y + 25;
 
                 this.sprite.style.left = nextx + 'px';
                 this.sprite.style.top = nexty + 'px';
                 player.posArr.push({ x: nextx, y: nexty })
                 break;
             case 2:
-                nextx = player.posArr[player.posArr.length - 1].x  + 13;
+                nextx = player.posArr[player.posArr.length - 1].x  ;
                 nexty = player.posArr[player.posArr.length - 1].y - 25;
 
                 this.sprite.style.left = nextx + 'px';
