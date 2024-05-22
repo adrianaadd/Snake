@@ -13,8 +13,6 @@ let direction = -1
 function startGame() {
     player.insertPlayer()
     timerMovePlayer = setInterval(() => player.move(), 10)
-  
-   
 }
 
 //Key Listener
